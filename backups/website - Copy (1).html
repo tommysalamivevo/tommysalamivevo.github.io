@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<style>
+body {
+	margin: 0;
+	font-family: Tahoma, sans-serif;
+}
+
+/* Navigaiton Bar CSS */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 28px;
+  text-decoration: none;
+  font-size: 22px;
+  justify-content: left;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav a.active {
+  background-color: #00bbaa;
+  color: white;
+}
+
+.topnav logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav .icon{
+  display: none;
+}
+/* When the screen is less than 1300px wide */
+@media screen and (max-width: 1300px) {
+  .topnav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  /* Hide menu items by default, except icon */
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
+  /* Move hamburger to left */
+  .topnav a.icon {
+    display: block;
+    order: -1;
+    padding: 20px 28px;
+  }
+
+  /* When expanded (responsive), make menu vertical */
+  .topnav.responsive {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .topnav.responsive a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border-top: 1px solid #444;
+  }
+
+  /* Keep the icon fixed at the top-left */
+  .topnav.responsive a.icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: none;
+  }
+}
+
+/* End of Navigaiton Bar CSS */
+
+.paperCanvas {
+	position: relative;
+	text-align: center;
+	padding: 30px 30px;
+}
+.paperCanvas a {
+	position: absolute;
+	top: 30%;
+	left:40%;
+	transform: translate(-50%, -50%);
+	font-size: 22px;
+	max-width: 250px;
+	transform: rotate(10deg);
+}
+
+</style>
+</head>
+<body style="background-color:#e8dab5;">
+
+<div class="topnav" id="myTopnav">
+  <a class="active" href="website.html">Home</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="projects.html">Projects</a>
+  <logo><img src="logo.png" alt="Logo" style="height:85px;"></logo>
+  <a href="javascript:void(0);" class="icon" onclick="collapseNavBar()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div class="w3-container w3-center w3-animate-opacity">
+	<div class="paperCanvas">
+		<img src="paper.png" style="transform:rotate(10deg);">
+		<a>Hello there! I'm Tommy, and this is my site! It's still a work in progress, so check back later!</a>
+	</div>
+</div>
+
+<a href="https://github.com/tommysalamivevo">My Github Page</a> <!--Hyperlink></!-->
+
+
+
+<script>
+function collapseNavBar() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</body>
+</html>
